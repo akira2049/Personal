@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="694.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.tutorialprojects.midterm2222181sec6.MidTermController">
+   <children>
+      <Label layoutX="42.0" layoutY="59.0" text="Serial no:" />
+      <Label layoutX="42.0" layoutY="117.0" text="Price:" />
+      <ComboBox fx:id="brandComboBox" layoutX="356.0" layoutY="55.0" prefWidth="150.0" />
+      <ComboBox fx:id="modelComboBox" layoutX="356.0" layoutY="113.0" prefWidth="150.0" />
+      <TextField fx:id="serialNotextfField" layoutX="115.0" layoutY="55.0" />
+      <TextField fx:id="priceTextField" layoutX="116.0" layoutY="113.0" />
+      <Label layoutX="308.0" layoutY="59.0" text="Brand:" />
+      <Label layoutX="307.0" layoutY="117.0" text="Model:" />
+      <CheckBox fx:id="hasGpuheckBox" layoutX="549.0" layoutY="59.0" mnemonicParsing="false" text="Has GPU ?" />
+      <Button layoutX="164.0" layoutY="172.0" mnemonicParsing="false" onAction="#AddNewComputerButton" text="Add New Computer to ArrayList" />
+      <Label layoutX="549.0" layoutY="117.0" text="No of GPU Core:" />
+      <TextField fx:id="noOfGpuTextfield" layoutX="652.0" layoutY="112.0" prefHeight="26.0" prefWidth="78.0" />
+      <TableView fx:id="tableView" layoutX="80.0" layoutY="219.0" prefHeight="306.0" prefWidth="591.0">
+        <columns>
+          <TableColumn fx:id="serialCol" prefWidth="75.0" text="Serial no" />
+          <TableColumn fx:id="brandCol" prefWidth="75.0" text="Brand" />
+            <TableColumn fx:id="modelCol" prefWidth="75.0" text="Model" />
+            <TableColumn fx:id="priceCol" prefWidth="75.0" text="Price" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button layoutX="344.0" layoutY="597.0" mnemonicParsing="false" onAction="#searchAndshowButton" text="Search &amp; Show" />
+      <ComboBox fx:id="brandComboBox1" layoutX="136.0" layoutY="562.0" prefWidth="150.0" />
+      <ComboBox fx:id="modelComboBox1" layoutX="136.0" layoutY="623.0" prefWidth="150.0" />
+      <Label layoutX="80.0" layoutY="566.0" text="Brand:" />
+      <Label layoutX="79.0" layoutY="627.0" text="Model:" />
+   </children>
+</AnchorPane>
