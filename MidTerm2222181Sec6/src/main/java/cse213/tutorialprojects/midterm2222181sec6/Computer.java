@@ -78,7 +78,7 @@ public class Computer {
     }
 
     public void updateWithVat() {
-        float vat = 0.15;
+        float vat = 0.15f;
         float vatAmount = this.price * vat;
         float total = this.price + vatAmount;
         this.setPrice(total);
