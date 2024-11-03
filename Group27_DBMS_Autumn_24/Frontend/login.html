@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="login_style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="logo.png" rel="icon" type="image/png" >
+    <title>Login</title>
+    <style>
+        .hidden-button {
+            display: none;
+        }
+    </style>
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <img src="logo.png" alt="Logo" class="img-fluid mb-2" style="max-width: 100%; height: auto;">
+        <h1>Login</h1>
+        <form method="get" id="loginForm">
+            <input type="text" class="form-control mb-3" placeholder="Email or Phone" required>
+            <input type="password" class="form-control mb-3" placeholder="Password" required>
+            
+            <select id="userType" class="form-control mb-4" required onchange="setFormAction()">
+                <option value="" disabled selected>Select User Type</option>
+                <option value="inspector.html">Inspector</option>
+                <option value="center.html">Processing Center</option>
+                <option value="transport.html">Transport</option>
+                <option value="storage.html">Storage</option>
+                <option value="retailer.html">Retailer</option>
+            </select>
+            <button type="submit" class="btn btn-primary button">Sign in</button>
+        </form>
+    </div>
+    
+    <script>
+        function setFormAction() {
+            const userType = document.getElementById("userType").value;
+            document.getElementById("loginForm").action = userType;
+        }
+    </script>
+</body>
+</html>
